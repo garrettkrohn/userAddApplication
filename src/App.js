@@ -3,6 +3,7 @@ import User from "./Components/User";
 import Display from "./Components/Display";
 import Card from "./UI/Card";
 import { useState } from "react";
+import Modal from "./UI/Modal";
 
 const DUMMYUSERS = [
   { name: "Max", age: 31 },
@@ -13,13 +14,26 @@ const DUMMYUSERS = [
 
 function App() {
   const [users, setUsers] = useState(DUMMYUSERS);
+  const [modalVisible, setModalVisible] = useState(true);
+  const [error, setError] = useState("Name field cannot be blank");
 
   const addUser = (newUser) => {
     setUsers(() => [...users, newUser]);
   };
 
+  const toggleModal = () => {
+    setModalVisible((state) => !state);
+  };
+
+  const modal = modalVisible ? (
+    <Modal error={error} toggleModal={toggleModal} />
+  ) : (
+    ""
+  );
+
   return (
     <>
+      {modal}
       <Card>
         <User addUser={addUser} />
       </Card>
