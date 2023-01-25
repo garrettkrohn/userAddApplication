@@ -14,11 +14,15 @@ const DUMMYUSERS = [
 
 function App() {
   const [users, setUsers] = useState(DUMMYUSERS);
-  const [modalVisible, setModalVisible] = useState(true);
+  const [modalVisible, setModalVisible] = useState(false);
   const [error, setError] = useState("Name field cannot be blank");
 
   const addUser = (newUser) => {
     setUsers(() => [...users, newUser]);
+  };
+
+  const setErrorState = (error) => {
+    setError(error);
   };
 
   const toggleModal = () => {
@@ -35,7 +39,11 @@ function App() {
     <>
       {modal}
       <Card>
-        <User addUser={addUser} />
+        <User
+          addUser={addUser}
+          setError={setErrorState}
+          toggleModal={toggleModal}
+        />
       </Card>
       <Card>
         <Display users={users} />

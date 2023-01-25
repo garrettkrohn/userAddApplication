@@ -7,11 +7,26 @@ const User = (props) => {
 
   const addUserHandler = (event) => {
     event.preventDefault();
-    if (newUser.name !== "" && 100 > newUser.age && newUser.age > 0) {
-      props.addUser(newUser);
+
+    if (newUser.name === "") {
+      props.setError("Please enter a name.");
+      props.toggleModal();
+      return;
+    } else if (newUser.age < 0) {
+      props.setError("An age less than 0??");
+      props.toggleModal();
+      return;
+    } else if (newUser.age > 150) {
+      props.setError("I don't think you're really that old...");
+      props.toggleModal();
     } else {
-      console.log("error");
+      props.addUser(newUser);
     }
+    // if (newUser.name !== "" && 100 > newUser.age && newUser.age > 0) {
+    //   props.addUser(newUser);
+    // } else {
+    //   console.log("error");
+    // }
   };
 
   const handleChange = (event) => {
