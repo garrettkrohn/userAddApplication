@@ -9,7 +9,8 @@ const Modal = (props) => {
   };
 
   return (
-    <div className="opacity">
+    <div>
+      <div className="backdrop" onClick={continueButtonHandler}></div>
       <div className="modal-container">
         <div className="modal-header">Invalid input</div>
         <div className="modal-text">{props.error}</div>

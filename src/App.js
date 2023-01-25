@@ -14,7 +14,7 @@ const DUMMYUSERS = [
 
 function App() {
   const [users, setUsers] = useState(DUMMYUSERS);
-  const [modalVisible, setModalVisible] = useState(false);
+  const [modalVisible, setModalVisible] = useState(true);
   const [error, setError] = useState("Name field cannot be blank");
 
   const addUser = (newUser) => {
