@@ -7,9 +7,11 @@ const User = (props) => {
 
   const addUserHandler = (event) => {
     event.preventDefault();
-    console.log(newUser);
-    console.log("handler run");
-    props.addUser(newUser);
+    if (newUser.name !== "" && 100 > newUser.age && newUser.age > 0) {
+      props.addUser(newUser);
+    } else {
+      console.log("error");
+    }
   };
 
   const handleChange = (event) => {
