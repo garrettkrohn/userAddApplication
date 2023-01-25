@@ -14,13 +14,8 @@ const DUMMYUSERS = [
 function App() {
   const [users, setUsers] = useState(DUMMYUSERS);
 
-  const newUserAdd = { name: "added", age: 1 };
-
   const addUser = (newUser) => {
-    console.log("add user run");
-
-    setUsers(() => [...users, newUserAdd]);
-    console.log(users);
+    setUsers(() => [...users, newUser]);
   };
 
   return (
