@@ -1,0 +1,30 @@
+.user-container,
+.user-container * {
+  background-color: white;
+}
+
+.user-container {
+  padding: 16px;
+  border-radius: 15px;
+}
+
+.user-name,
+.user-age {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.user-name {
+  margin-bottom: 10px;
+}
+
+.user-container input {
+  width: 100%;
+  margin-bottom: 10px;
+  border-color: rgb(52, 46, 46);
+}
+
+.user-age {
+  margin-bottom: 10px;
+}

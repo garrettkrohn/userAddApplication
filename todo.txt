@@ -1,0 +1,15 @@
+- add username and age
+- modal if we enter a blank
+- modal if we enter a negative age
+- add user will display all of them below
+- clicking on the name will delete that entry
+
+
+plan
+=====
+-create user component
+-create card component
+-create button component
+-add validation
+-manage the user's state
+-add a reusable modal

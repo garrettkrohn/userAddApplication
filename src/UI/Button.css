@@ -1,0 +1,10 @@
+.button * {
+  background-color: purple;
+  padding: 5px 16px;
+  color: white;
+  margin-top: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.button {
+  width: fit-content;
+}
