@@ -1,0 +1,14 @@
+.display-container,
+.display-container * {
+  background-color: white;
+}
+.display-container {
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.display-user {
+  border: 2px solid gray;
+  padding: 4px;
+  margin-bottom: 4px;
+}
