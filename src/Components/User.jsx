@@ -22,11 +22,6 @@ const User = (props) => {
     } else {
       props.addUser(newUser);
     }
-    // if (newUser.name !== "" && 100 > newUser.age && newUser.age > 0) {
-    //   props.addUser(newUser);
-    // } else {
-    //   console.log("error");
-    // }
   };
 
   const handleChange = (event) => {
