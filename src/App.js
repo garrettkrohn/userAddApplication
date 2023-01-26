@@ -28,7 +28,6 @@ function App() {
         age: newUserAge,
       },
     ]);
-    console.log(users);
   };
 
   const setErrorState = (error) => {
@@ -37,6 +36,17 @@ function App() {
 
   const toggleModal = () => {
     setModalVisible((state) => !state);
+  };
+
+  const deleteId = (idToDelete) => {
+    const newArray = users.filter((item) => item.id !== idToDelete);
+    setUsers(newArray);
+    // for (const user of users) {
+    //   if (user.id === idToDelete) {
+    //     console.log(...users);
+    //     setUsers(() => [...users, users.splice(idToDelete)]);
+    //   }
+    // }
   };
 
   const modal = modalVisible ? (
@@ -56,7 +66,7 @@ function App() {
         />
       </Card>
       <Card>
-        <Display users={users} />
+        <Display users={users} deleteId={deleteId} />
       </Card>
     </>
   );
