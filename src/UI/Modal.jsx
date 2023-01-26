@@ -4,7 +4,6 @@ import "./Modal.css";
 
 const Modal = (props) => {
   const continueButtonHandler = () => {
-    console.log("click");
     props.toggleModal();
   };
 

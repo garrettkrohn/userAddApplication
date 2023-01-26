@@ -41,12 +41,6 @@ function App() {
   const deleteId = (idToDelete) => {
     const newArray = users.filter((item) => item.id !== idToDelete);
     setUsers(newArray);
-    // for (const user of users) {
-    //   if (user.id === idToDelete) {
-    //     console.log(...users);
-    //     setUsers(() => [...users, users.splice(idToDelete)]);
-    //   }
-    // }
   };
 
   const modal = modalVisible ? (

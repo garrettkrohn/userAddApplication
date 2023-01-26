@@ -4,7 +4,6 @@ import "./Display.css";
 const Display = (props) => {
   const deleteUser = (id) => {
     props.deleteId(id);
-    // console.log(id);
   };
 
   return (
