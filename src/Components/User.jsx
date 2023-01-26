@@ -20,7 +20,7 @@ const User = (props) => {
       props.setError("I don't think you're really that old...");
       props.toggleModal();
     } else {
-      props.addUser(newUser);
+      props.addUser(newUser.name, newUser.age);
     }
   };
 

@@ -6,19 +6,29 @@ import { useState } from "react";
 import Modal from "./UI/Modal";
 
 const DUMMYUSERS = [
-  { name: "Max", age: 31 },
-  { name: "Garrett", age: 31 },
-  { name: "Bob", age: 43 },
-  { name: "Phil", age: 21 },
+  { id: 1, name: "Max", age: 31 },
+  { id: 2, name: "Garrett", age: 31 },
+  { id: 3, name: "Bob", age: 43 },
+  { id: 4, name: "Phil", age: 21 },
 ];
 
 function App() {
   const [users, setUsers] = useState(DUMMYUSERS);
-  const [modalVisible, setModalVisible] = useState(true);
+  const [modalVisible, setModalVisible] = useState(false);
   const [error, setError] = useState("Name field cannot be blank");
 
-  const addUser = (newUser) => {
-    setUsers(() => [...users, newUser]);
+  const addUser = (newUserName, newUserAge) => {
+    const length = users.length - 1;
+    const id = users[length].id + 1;
+    setUsers(() => [
+      ...users,
+      {
+        id: id,
+        name: newUserName,
+        age: newUserAge,
+      },
+    ]);
+    console.log(users);
   };
 
   const setErrorState = (error) => {
